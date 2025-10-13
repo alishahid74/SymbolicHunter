@@ -65,40 +65,6 @@ python3 -c "import angr; print('✓ angr installed successfully')"
 python3 -c "import flask; print('✓ Flask installed successfully')"
 ```
 
----
-
-## 🏗️ Project Structure
-
-```
-SymbolicHunter/
-├── symbolic_hunter.py          # Core symbolic execution engine
-├── symbolic_hunter_complete.py # Integrated tool with all features
-├── web_dashboard.py            # Flask web interface
-├── config.py                   # Configuration settings
-├── requirements.txt            # Python dependencies
-├── setup.sh                    # Setup script
-├── start_dashboard.sh          # Web dashboard launcher
-├── README.md                   # This file
-│
-├── modules/                    # Analysis modules
-│   ├── __init__.py            # Module initialization
-│   ├── reporting.py           # HTML/PDF report generation
-│   ├── exploit_tester.py      # Automatic exploit testing
-│   ├── signature_gen.py       # YARA/Snort/SIGMA generation
-│   ├── memory_analyzer.py     # Memory dump analysis
-│   └── utils.py               # Shared utility functions
-│
-├── templates/                  # Web UI templates
-│   ├── dashboard.html         # Main dashboard interface
-│   └── report_template.html   # Analysis report template
-│
-├── uploads/                    # Uploaded binaries (auto-created)
-├── output/                     # Analysis results (auto-created)
-└── signatures/                 # Generated signatures (auto-created)
-```
-
----
-
 ## 🚀 Quick Start
 
 ### Option 1: Web Dashboard (Recommended for Beginners)
@@ -171,8 +137,6 @@ python3 symbolic_hunter.py target.exe -v --max-states 5000 --timeout 1800
 # Quick 30-second triage scan
 python3 symbolic_hunter.py binary.exe --timeout 30 --max-states 200
 ```
-
----
 
 ## 💻 Web Dashboard Guide
 
@@ -432,8 +396,6 @@ python3 symbolic_hunter.py unknown.exe \
 # - Basic taint analysis
 # - JSON export for further processing
 ```
-
----
 
 ## 📊 Understanding the Output
 
@@ -1199,20 +1161,6 @@ hunter.explore_binary()
 "
 ```
 
-### Getting Help
-
-ignore for now this part.
-If issues persist:
-
-1. Check GitHub Issues. https://github.com/alishahid74/SymbolicHunter.git
-2. Create New Issue with:
-   - Error message (full traceback)
-   - Binary type (PE/ELF, 32/64-bit)
-   - Command used
-   - Python version: `python3 --version`
-   - angr version: `pip show angr`
-   - Operating system
-
 ## 🎯 Use Cases
 
 ### 🔐 Security Research & 0-Day Discovery
@@ -1496,7 +1444,6 @@ def test_exploit_generation():
 ### Development Team
 
 Created by. Rachel Soubier and Shahid Ali
-Contributors [See CONTRIBUTORS.md]
 
 ### Built With
 
@@ -1544,75 +1491,6 @@ SymbolicHunter is designed for authorized security testing, research, and educat
 - Distributing exploits for malicious purposes
 - Any illegal activities
 
-### Liability Disclaimer
-
-the authors.
-- Are NOT responsible for any misuse of this tool
-- Provide this software "AS IS" without warranty of any kind
-- Make no guarantees about accuracy or completeness
-- Shall not be held liable for any damages arising from use
-- Do not condone or support illegal activities
-
-### Legal Compliance
-
-Users are responsible for.
-- Obtaining proper authorization before testing ANY system
-- Complying with all applicable local, state, federal, and international laws
-- Following responsible disclosure practices
-- Using the tool ethically and professionally
-- Understanding and accepting all legal risks
-
-### Responsible Disclosure
-
-If you discover vulnerabilities using SymbolicHunter:
-
-1. Report responsibly to the affected vendor/maintainer
-2. Allow reasonable time for patching (typically 90 days)
-3. Do not exploit vulnerabilities maliciously
-4. Follow coordinated disclosure practices
-5. Adhere to vendor bug bounty program rules if applicable
-
-### Regional Laws
-
-Be aware of relevant laws in your jurisdiction:
-- USA: Computer Fraud and Abuse Act (CFAA)
-- UK: Computer Misuse Act 1990
-- EU: Directive on attacks against information systems
-- International: Budapest Convention on Cybercrime
-
-### Acceptable Use Agreement
-
-By using SymbolicHunter, you agree to.
-- Use it legally, ethically, and responsibly
-- Obtain authorization before analyzing any system
-- Not use it for malicious purposes
-- Accept all legal responsibility for your actions
-- Comply with all applicable laws and regulations
-
-### Educational Use
-
-For educational purposes:
-- Use only on provided test binaries or CTF challenges
-- Analyze in isolated lab environments
-- Follow institution's acceptable use policies
-- Cite SymbolicHunter in academic work
-
-### Commercial Use
-
-For commercial penetration testing:
-- Obtain signed authorization from clients
-- Follow industry standards (OWASP, PTES, etc.)
-- Maintain professional liability insurance
-- Document all activities thoroughly
-
----
-
-## 📧 Support & Contact
-
-### Getting Help
-
-This part will be add soon.
-
 
 ### Third-Party Licenses
 
@@ -1638,34 +1516,6 @@ SymbolicHunter uses the following open-source projects:
 - ✅ RESTful API
 - ✅ WebSocket support
 
-### Version 1.5 (Q2 2025)
-- 🔄 Parallel state exploration (multi-threading)
-- 🔄 Enhanced path pruning algorithms
-- 🔄 ARM/ARM64 binary support
-- 🔄 Docker containerization
-- 🔄 Advanced web UI visualizations (D3.js graphs)
-- 🔄 Multi-user support with authentication
-- 🔄 Analysis history and comparison tools
-
-### Version 2.0 (Q4 2025)
-- 📋 Full web-based IDE interface
-- 📋 Machine learning path prioritization
-- 📋 Plugin architecture for extensions
-- 📋 IDA Pro / Ghidra integration
-- 📋 Cloud analysis support (AWS, Azure, GCP)
-- 📋 Distributed analysis clusters
-- 📋 Real-time collaboration features
-- 📋 Advanced diff analysis
-
-### Future Considerations
-- PDF report generation
-- Automated patch generation
-- Differential analysis (binary diffing)
-- Multi-architecture support (MIPS, RISC-V)
-- Mobile binary analysis (APK, IPA)
-- Firmware analysis capabilities
-- IoT device analysis
-- Blockchain smart contract analysis
 
 ## ❓ FAQ
 
@@ -1700,14 +1550,11 @@ Q: Is it better than fuzzing?
 A: They're complementary. Symbolic execution finds deep paths with complex constraints; fuzzing finds surface bugs quickly. Best results come from using both.
 
 Q: Can I contribute to the project?  
-A: Absolutely! See the [Contributing](#-contributing) section for guidelines.
+A: Absolutely!
 
 Q: Is commercial use allowed?  
-A: Yes, under MIT license terms. For commercial support, contact us.
+A: Yes, under MIT license terms. For commercial support.
 
----
-
-## 🌟 Star History & Community
 
 If you find SymbolicHunter useful, please consider:
 
@@ -1724,16 +1571,16 @@ If you find SymbolicHunter useful, please consider:
 - angr Documentation. [https://docs.angr.io](https://docs.angr.io)
 - claripy. [https://github.com/angr/claripy](https://github.com/angr/claripy)
 
----
-
 
 
 ## 🔍 Made with ❤️ for the Security Research Community
 
 SymbolicHunter - Finding vulnerabilities before the bad guys do.
 
-Author. Rachel soubier and Shahid Ali 
+Author. Rachel soubier and Shahid Ali
+
 Version. 1.0.0  
+
 License. MIT
 
 The best defense is knowing your vulnerabilities before attackers do.
