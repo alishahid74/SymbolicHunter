@@ -1483,14 +1483,6 @@ SymbolicHunter is designed for authorized security testing, research, and educat
 - Vulnerability research with responsible disclosure
 - Internal security assessments on owned systems
 
-❌ .PROHIBITED.
-- Unauthorized access to systems or networks
-- Malicious use or weaponization of exploits
-- Testing systems without explicit written permission
-- Violating computer fraud and abuse laws (CFAA, Computer Misuse Act, etc.)
-- Distributing exploits for malicious purposes
-- Any illegal activities
-
 
 ### Third-Party Licenses
 
