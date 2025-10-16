@@ -1569,7 +1569,7 @@ If you find SymbolicHunter useful, please consider:
 
 SymbolicHunter - Finding vulnerabilities before the bad guys do.
 
-Author. Rachel soubier and Shahid Ali
+Author. Rachel Soubier and Shahid Ali
 
 Version. 1.0.0  
 
